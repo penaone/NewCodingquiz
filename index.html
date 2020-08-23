@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSQuizgame</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>Timer
+        <div id="timer">
+            <div id="counter"></div>
+            <!-- <div id="btimeGauge"></div> -->
+            <div id="timeGauge"></div>
+        </div>
+    </header>
+
+    <div id="container">
+
+        <div id="start">Coding Quiz Challenge! Lets Start!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            
+            <div id="answers">
+                <div class="answer" id="A" onclick="verifyAnswer('A')"></div>
+                <div class="answer" id="B" onclick="verifyAnswer('B')"></div>
+                <div class="answer" id="C" onclick="verifyAnswer('C')"></div>
+                <div class="answer" id="D" onclick="verifyAnswer('D')"></div>
+            </div>
+
+
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none">Your Score</div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
