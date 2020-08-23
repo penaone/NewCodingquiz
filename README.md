@@ -17,3 +17,11 @@ I needed to work with the DOM to complete this assignment.
 
 Credit: given to tutor and TA's for code assistance.
         Followed tutorial guide on youtube for code framework Codeexplained.org
+
+        Webpage is deployed at https://penaone.github.io/NewCodingquiz/
+
+        github repository is : https://github.com/penaone/NewCodingquiz
+
+        do to file extension issues my earlier commits are in a different repository. They are at:
+        https://github.com/penaone/Codingquiz
+        

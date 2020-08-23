@@ -226,6 +226,6 @@ if(highscore !== null){
 }
 else{
     localStorage.setItem("highscore", JSON.stringify(score));
-    
+
 }
 }
