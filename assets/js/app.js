@@ -10,7 +10,7 @@ var timeGauge = document.getElementById("timeGauge");
 var progress = document.getElementById("progress");
 var scoreDiv = document.getElementById("scoreContainer");
 var timerDiv = document.getElementById("timer");
-
+var highscoreDiv = document.getElementById("highscore");
 
 
 // create our questions
