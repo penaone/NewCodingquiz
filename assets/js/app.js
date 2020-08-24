@@ -81,7 +81,7 @@ var quizQuestions = [{
     correct: "B"
 }, {
     question: "Javascript is a language that__________",
-    answerA: "1.is varantly evolving and is essential in web development",
+    answerA: "1.is constantly evolving and is essential in web development",
     answerB: "2.is outdated and soon to be replaced",
     answerC: "3.was created for writing machine language",
     answerD: "4.is slow and does not play well with others",
