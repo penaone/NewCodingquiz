@@ -13,6 +13,8 @@ var timerDiv = document.getElementById("timer");
 var highscoreDiv = document.getElementById("highscore");
 
 
+
+
 // create our questions
 var quizQuestions = [{
     question: "Which of the following is true about variable naming conventions in JavaScript?",
@@ -147,6 +149,7 @@ function renderProgress() {
 
 
 function renderCounter() {
+    feedback.style.display = "none";
     testTime--
     counter.innerHTML = testTime;
     if (testTime <= 0) {
@@ -184,15 +187,25 @@ function verifyAnswer(answer) {
 
 // answer is correct
 function answerIsCorrect() {
+    var feedback = document.querySelector("#feedback")
+    feedback.style.display = "block";
+    feedback.textContent = "Correct";
     nextQuestion();
 
 }
 
 // answer is Wrong
 function answerIsWrong() {
+    var feedback = document.querySelector("#feedback")
+    feedback.style.display = "block";
+    feedback.textContent = "wrong";
+    
 
-    nextQuestion();
+    
+
     testTime = testTime - 10
+    nextQuestion();
+    
 
 
 }
@@ -207,16 +220,25 @@ function endGame() {
 // score render
 function scoreRender() {
     scoreDiv.style.display = "block";
+    document.querySelector("#endTheScreen").style.display = "block";
+    document.querySelector("#feedback").style.display = "none";
+    
+
+    quiz.style.display = "none";
+    
 
 
     // calculate the amo0unt of question percent answered by the user
-    var scorePerCent = Math.round(100 * score / quizQuestions.length);
-    scoreDiv.textContent = "You scored " + scorePerCent + "%";
-    localScore();
+    getTopScorer();
+    
    
-}
+      
+   
+} 
 function localScore() {
-var highscore = localStorage.getItem("highscore");
+    document.querySelector("#highScore").style.display = "none";
+    document.querySelector("#endTheScreen").style.display = "none";
+var highscore = JSON.parse(localStorage.getItem("highscore"));
 
 if(highscore !== null){
     if (score > highscore) {
@@ -229,3 +251,13 @@ else{
 
 }
 }
+document.querySelector("#submit").onclick = localScore;
+// var topScore = document.getElementById("initials")
+
+function getTopScorer(){
+    var topScore = document.getElementById("initials");
+    var scorePerCent = Math.round(100 * score / quizQuestions.length);
+    scoreDiv.textContent = "You scored " + scorePerCent + "%";
+    document.querySelector("#timeGauge").textContent = "High Score is " + scorePerCent + "%" + " by " + topScore;
+}
+

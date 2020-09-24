@@ -3,16 +3,16 @@ body{
     font-family: monospace;
 }
 
-#highscore{
+/* #highscore{
     display: inline;
     position: top;
     text-align: right;
     margin: 0;
     padding: 0;
-    font-size: 10px;
+    font-size: 10px; */
 
 
-}
+/* } */
 
 header{
     display: inline;
@@ -96,18 +96,17 @@ header{
 
 #timer{
     margin: 0;
-    position: top;
-    height : 2px;
-    width : 2px;
-    bottom : 0px;
-    text-align: right;
+    position: absolute;
+    top:10px;
+    right:10px;
+    
     
 }
-#counter{
+/* #counter{
     display: inline;
     text-align: right;
-    font-size: 15px;
-}
+    font-size: 15px; */
+/* } */
 #btimeGauge{
     width : 150px;
     height : 10px;
@@ -116,10 +115,10 @@ header{
     margin-left : 25px;
 }
 #timeGauge{
-    height : 10px;
-    border-radius: 10px;
-    margin-top : -10px;
-    margin-left : 25px;
+ position:absolute;
+ top : 10px;
+ left : 10px;
+  
     
 }
 #progress{

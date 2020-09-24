@@ -9,15 +9,12 @@
 </head>
 
 <body>
-    <header>Timer
-        <div id="timer">
-            <div id="counter"></div>
-            <!-- <div id="btimeGauge"></div> -->
-            <div id="timeGauge"></div>
-        </div>
-    </header>
-
+    <div id="timeGauge">View High Score</div>
+    <div id="timer">Timer: <span id="counter"></span></div>
+   
     <div id="container">
+        
+
 
         <div id="start">Coding Quiz Challenge! Lets Start!</div>
         <div id="quiz" style="display: none">
@@ -33,9 +30,19 @@
 
             <div id="progress"></div>
         </div>
-        <div id="scoreContainer" style="display: none">Your Score</div>
+        <div id= "endTheScreen" style="display: none">
+            <h3>All done!</h3>
+           <p><span id="scoreContainer" style="display: none">Your Score</span></p>
+           <p>Enter your Initials<input id= "intials" type = "text"/></p>
+           <button id= "submit">Submit Initials</button>
+
+        </div>
+
+        <div id="feedback" style="display: none"></div>
+        
+        
     </div>
-    <div id="highscore">High Score</div>
+    <div id="highScore" style="display: none">High Score</div>
 
     <script src="./assets/js/app.js"></script>
 </body>
