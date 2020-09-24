@@ -11,7 +11,7 @@ var progress = document.getElementById("progress");
 var scoreDiv = document.getElementById("scoreContainer");
 var timerDiv = document.getElementById("timer");
 var highscoreDiv = document.getElementById("highscore");
-
+var topScore;
 
 
 
@@ -231,7 +231,7 @@ function scoreRender() {
     // calculate the amo0unt of question percent answered by the user
     getTopScorer();
     
-   
+    
       
    
 } 
@@ -255,7 +255,8 @@ document.querySelector("#submit").onclick = localScore;
 // var topScore = document.getElementById("initials")
 
 function getTopScorer(){
-    var topScore = document.getElementById("initials");
+    var topScoreElement = document.getElementById("initials");
+    var topScore = topScoreElement.innerText;
     var scorePerCent = Math.round(100 * score / quizQuestions.length);
     scoreDiv.textContent = "You scored " + scorePerCent + "%";
     document.querySelector("#timeGauge").textContent = "High Score is " + scorePerCent + "%" + " by " + topScore;
